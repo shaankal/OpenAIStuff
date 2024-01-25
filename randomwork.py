@@ -16,7 +16,6 @@ response = openai.chat.completions.create(
 
     ],
     temperature = 0
-
 )
 print(response.choices[0].message.content)
 
