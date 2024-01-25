@@ -15,6 +15,7 @@ response = openai.chat.completions.create(
         {"role": "user", "content":  "Explain to me how the National Football League works, with basic rules of how the sport of american football functions"},
 
     ],
+    #dummy check in
     temperature = 0
 )
 print(response.choices[0].message.content)
