@@ -3,7 +3,9 @@ import openai
 import os 
 
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "key would be here..."))
+os.environ["OPENAI_API_KEY"] = "apikey"
+
+client = OpenAI(api_key = "OPENAI_API_KEY")
 
 MODEL = "gpt-3.5-turbo"
 response = openai.chat.completions.create(
