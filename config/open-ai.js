@@ -6,5 +6,6 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
 
+//idk what this is for
 
 export default openai;
