@@ -1,16 +1,15 @@
-import { Configuration, OpenAIApi } from 'openai';
-import dotenv from 'dotenv';
+
+import OpenAI from "openai";
+import dotenv from "dotenv";
 dotenv.config();
 
-const configuration = new Configuration({
+const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
 
-const openai = new OpenAIApi(configuration);
-
 async function main() {
 
-    const chatCompletion = await openai.createChatCompletion({
+    const chatCompletion = await openai.chat.completions.create({
         model: 'gpt-3.5-turbo',
         messages: [
             { role: 'user' , content: 'What is the NFL (National Football League) ?'}
